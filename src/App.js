@@ -2,13 +2,16 @@ import './App.css';
 import React from 'react'
 import Componentuser from './Component/Componentuser'
 
-const Usercontext = React.createContext() 
+export const UserContext = React.createContext() 
+export const ChannelContext = React.createContext() 
 function App() {
   return (
     <div className="App">
-      <Usercontext.Provider value={'shaurya'}>
+      <UserContext.Provider value={'shaurya'}>
+      <ChannelContext.Provider value={'Rana'}>
       <Componentuser />
-      </Usercontext.Provider>
+      </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   )
 }

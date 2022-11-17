@@ -1,15 +1,24 @@
 import React from 'react'
-import {Usercontext} from '../App'
+import {UserContext,ChannelContext} from '../App'
+
 function file1() {
   return (
     <div>
-      <User.Consumer>
+      <UserContext.Consumer>
           {
               user => {
-                return  <div>Hello {user}</div>
+
+                return (<ChannelContext.Consumer>
+                   { channel => {
+                        return (
+                            <div>Hello {user} {channel}</div>
+                        )
+                    }}
+                </ChannelContext.Consumer>
+                ) 
               }
           }
-      </User.Consumer>
+      </UserContext.Consumer>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import file1 from './file1'
+import F from './file1'
 function Componentuser() {
   return (
     <div>
-      <file1/>
+      <F />
     </div>
   )
 }
